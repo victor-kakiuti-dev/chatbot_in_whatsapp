@@ -1,0 +1,96 @@
+🟢 ARQUITETURA IDEAL PARA PORTFÓLIO
+Stack recomendada
+
+VPS (DigitalOcean / Oracle / AWS EC2)
+
+Ubuntu
+
+Python
+
+Selenium + Chrome
+
+Flask ou FastAPI (apenas para controle/status)
+
+systemd ou supervisor para manter o bot vivo
+
+👉 Isso mostra que você sabe:
+
+Infra básica
+
+Processos long-running
+
+Deploy real (não só npm run dev)
+
+📦 COMO APRESENTAR NO PORTFÓLIO (MUITO IMPORTANTE)
+1️⃣ README honesto (isso conta pontos)
+
+No README, deixe explícito:
+
+Projeto educacional / demonstrativo
+
+Usa WhatsApp Web (não oficial)
+
+Não recomendado para produção
+
+Existe alternativa oficial (Meta API)
+
+Isso mostra maturidade profissional.
+
+2️⃣ Demonstração funcional (sem spam)
+
+Você pode:
+
+Deixar o bot responder só:
+
+mensagens específicas
+
+seu próprio número
+
+Ou rodar sob demanda
+
+3️⃣ O que você ganha tecnicamente (pontos fortes)
+
+Esse projeto prova que você sabe:
+
+Deploy em VPS
+
+Configurar Chrome headless
+
+Persistir sessão
+
+Gerenciar serviços Linux
+
+Lidar com instabilidade externa
+
+Pensar em riscos legais
+
+👉 Recrutador valoriza isso.
+
+🛠️ DEPLOY — CAMINHO PRÁTICO
+Opção A — Mais simples (recomendada)
+
+1 VPS
+
+Tudo rodando no mesmo servidor
+
+Processo sempre ativo
+
+Opção B — Mais “arquitetura”
+
+VPS para Selenium
+
+API Flask exposta (status, start/stop)
+
+Webhook simulado
+
+❗ O QUE NÃO FAZER (e derruba o projeto)
+
+❌ Spam
+
+❌ Envio em massa
+
+❌ Headless sem cuidado
+
+❌ Sem persistir sessão
+
+❌ Esconder que é não oficial

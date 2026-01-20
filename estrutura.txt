@@ -1,0 +1,14 @@
+whatsapp-bot/
+├── bot/
+│   ├── __init__.py
+│   ├── browser.py      # Selenium + Chrome
+│   ├── whatsapp.py     # lógica WhatsApp
+│   └── bot.py          # loop principal
+├── web/
+│   └── app.py          # Flask (status)
+├── data/
+│   └── chrome-profile/ # sessão persistente
+├── requirements.txt
+├── README.md
+└── run.py
+
