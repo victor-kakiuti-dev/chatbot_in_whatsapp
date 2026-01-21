@@ -1,0 +1,18 @@
+2026/01/20-15:31:59.941 234a Reusing MANIFEST /home/kakiuti-dev/bot/robot/data/chrome-profile/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2026/01/20-15:31:59.942 234a Recovering log #389
+2026/01/20-15:32:00.027 234a Reusing old log /home/kakiuti-dev/bot/robot/data/chrome-profile/Default/IndexedDB/https_web.whatsapp.com_0.indexeddb.leveldb/000389.log 
+2026/01/20-15:32:00.803 234d Level-0 table #396: started
+2026/01/20-15:32:00.835 234d Level-0 table #396: 956219 bytes OK
+2026/01/20-15:32:00.839 234d Delete type=0 #389
+2026/01/20-15:32:00.840 234a Manual compaction at level-0 from '\x00d\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00e\x00\x00\x00' @ 0 : 0; will stop at (end)
+2026/01/20-15:32:00.924 234d Compacting 1@1 + 4@2 files
+2026/01/20-15:32:01.041 234d Generated table #397@1: 65340 keys, 2302142 bytes
+2026/01/20-15:32:01.164 234d Generated table #398@1: 49846 keys, 2205823 bytes
+2026/01/20-15:32:01.171 234d Generated table #399@1: 4338 keys, 87660 bytes
+2026/01/20-15:32:01.171 234d Compacted 1@1 + 4@2 files => 4595625 bytes
+2026/01/20-15:32:01.174 234d compacted to: files[ 0 0 3 0 0 0 0 ]
+2026/01/20-15:32:01.174 234d Delete type=2 #392
+2026/01/20-15:32:01.174 234d Delete type=2 #388
+2026/01/20-15:32:01.174 234d Delete type=2 #396
+2026/01/20-15:32:01.174 234d Delete type=2 #391
+2026/01/20-15:32:01.174 234d Delete type=2 #393
