@@ -27,7 +27,7 @@ def get_last_received_message(driver, last_message):
 
         if messages != last_message:
             wait = WebDriverWait(driver, 20)
-            contact = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "span._ao3e")))
+            contact = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "[data-testid='conversation-panel-messages'] span[dir='ltr']")))
             contact.click()
 
         container = WebDriverWait(driver, 10).until(
