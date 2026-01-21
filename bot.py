@@ -19,12 +19,13 @@ def get_last_received_message(driver, last_message):
     
     """
 
-    try:
+    try:   # Seleciona o elemento CSS que é a caixa de texto na lista de contatos
         messages = driver.find_elements(
             By.CSS_SELECTOR,
             "[data-testid='conversation-panel-messages'] span[dir='ltr']"
         )
-
+         
+        # Caso o texto selecionado seja diferente do último texto selecionado ele iŕa clicar nesse elemento
         if messages != last_message:
             wait = WebDriverWait(driver, 20)
             contact = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "[data-testid='conversation-panel-messages'] span[dir='ltr']")))
@@ -33,7 +34,7 @@ def get_last_received_message(driver, last_message):
         container = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, "div[class*='copyable-area']"))
         )
-        
+        # Capta as mensagens recebidas por nós
         mensagens_recebidas = container.find_elements(By.CSS_SELECTOR, "div.message-in")
         
         if not mensagens_recebidas:
@@ -55,22 +56,21 @@ def get_last_received_message(driver, last_message):
         return None
 
 def send_message(driver, text):
-    try:
+    try:  # Tenta 
         wait = WebDriverWait(driver, 20)
-        contact = wait.until(EC.element_to_be_clickable((By.CSS_SELECTOR, "span._ao3e")))
-        contact.click()
+        # Com input_box iremos clicar no input para poder inserir a mensagem da llm e enviar a mensagem
         input_box = wait.until(
                 EC.presence_of_element_located(
                     (By.XPATH, '//footer//div[@role="textbox" and @contenteditable="true"]')
                 )
             )
-        input_box.click()              # ✅ agora clica de verdade
+        input_box.click()              
         time.sleep(0.2)
 
         input_box.send_keys(text)
         time.sleep(0.1)
 
-        input_box.send_keys(Keys.ENTER)  # ✅ forma correta
+        input_box.send_keys(Keys.ENTER) 
         time.sleep(1)
         return
     except StaleElementReferenceException:
@@ -115,7 +115,7 @@ def bot_loop(driver):
 
             assistant_reply = response.output_text
 
-            # 🔒 segurança extra
+            # segurança extra
             if not assistant_reply or not assistant_reply.strip():
                 print("Resposta vazia da LLM")
                 continue
@@ -128,7 +128,7 @@ def bot_loop(driver):
 
             last_message = msg
 
-            # 🧠 evita histórico infinito (opcional mas recomendado)
+            # evita histórico infinito
             if len(history) > 20:
                 history = [history[0]] + history[-18:]
 
